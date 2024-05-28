@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../../assets/fonts/ttf/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../../assets/fonts/ttf/PlayfairDisplay-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../../assets/fonts/ttf/PlayfairDisplay-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../../assets/fonts/ttf/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Playfair Display";
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.nav {
+  background-color: #02474d;
+  box-shadow: 0 0.1rem 0.15rem rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  min-width: 280px;
+}
+.nav__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  min-width: 16rem;
+  overflow: hidden;
+  gap: 1rem;
+}
+@media screen and (min-width: 540px) {
+  .nav__container {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav__container {
+    padding: 1rem 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .nav__container {
+    width: 1024px;
+    margin: auto;
+  }
+}
+.nav__logo {
+  width: 15rem;
+}
+.nav__search {
+  display: flex;
+}
+.nav__input {
+  padding: 0.2rem;
+  border: none;
+  height: 100%;
+}
+.nav__input:focus-visible {
+  outline-color: #b5d6ba;
+}
+.nav__button {
+  border: #a5c2a9 solid 0.1rem;
+  padding: 0.2rem;
+  color: white;
+  background-color: #b5d6ba;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.news {
+  padding: 1rem;
+  background-color: #fff0da;
+  padding-bottom: 2rem;
+}
+.news__header {
+  font-size: 2rem;
+  font-weight: normal;
+  color: #000;
+  margin-bottom: 2rem;
+}
+.news__bold {
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+.news__smaller {
+  font-size: 1.5rem;
+  color: #02474d;
+}
+.news__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .news__container {
+    width: 1024px;
+  }
+}
+.news__article {
+  border: #000 solid 1px;
+  padding: 1rem;
+  width: 400px;
+  display: flex;
+  background-color: white;
+  border-radius: 0.3rem;
+  border: #fff0da;
+  box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+}
+.news__article:hover {
+  transform: scale(1.05);
+}
+@media screen and (min-width: 540px) {
+  .news__article {
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 768px) {
+  .news__article {
+    width: 33.333%;
+  }
+}
+.news__title {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.news__info {
+  overflow: hidden;
+  word-wrap: break-word;
+  color: #abacab;
+  font-size: 0.8rem;
+}
+.news__link {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer {
+  background-color: #02474d;
+  color: white;
+  position: relative;
+  padding: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer__card {
+    width: 1024px;
+    margin: auto;
+  }
+}
+.footer__title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.footer__logo {
+  padding-top: 1rem;
+  width: 10rem;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+.footer__container--icons {
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__container--icons {
+    width: 33.333%;
+  }
+}
+.footer__subtitle {
+  font-weight: bold;
+}/*# sourceMappingURL=global.css.map */

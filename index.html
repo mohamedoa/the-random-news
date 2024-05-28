@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./scripts/hackathon-api.js"></script>
+    <script src="./scripts/index-page.js" defer></script>
+    <title>Hackathon</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__container">
+        <a class="nav__logo" href="./index.html"
+          ><img src="./assets/logo/logo.svg" alt="The Random News Logo"
+        /></a>
+
+        <div class="nav__search">
+          <form action="form" class="nav__form">
+            <input
+              type="text"
+              id="search-input"
+              name="query"
+              class="nav__input"
+              placeholder="Search News Here..."
+            />
+            <button id="search-button" class="nav__button">SEARCH</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="news">
+        <header>
+          <h1 class="news__header">
+            Welcome to <span class="news__bold">T</span>he
+            <span class="news__bold">R</span>andom<span class="news__bold"
+              >.</span
+            ><br /><span class="news__smaller">
+              Find all your wacky news here!</span
+            >
+          </h1>
+        </header>
+        <div class="news__container">
+          <article class="news__article">
+            <a class="news__link" href="">
+              <div class="news__card">
+                <img
+                  src="https://placehold.co/400x450"
+                  alt=""
+                  class="news__figure"
+                />
+                <h2 class="news__title">Lorem, ipsum dolor.</h2>
+                <p class="news__info">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aperiam rerum laudantium eius velit magni quod vitae dolores
+                  neque temporibus modi.
+                </p>
+              </div></a
+            >
+          </article>
+
+          <article class="news__article">
+            <a class="news__link" href="">
+              <div class="news__card">
+                <img
+                  src="https://placehold.co/400x450"
+                  alt=""
+                  class="news__figure"
+                />
+                <h2 class="news__title">Lorem, ipsum dolor.</h2>
+                <p class="news__info">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aperiam rerum laudantium eius velit magni quod vitae dolores
+                  neque temporibus modi.
+                </p>
+              </div></a
+            >
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+        <article class="footer__card">
+          <div class="footer__social">
+            <div class="footer__header">
+              <h2 class="footer__title">Get In Touch</h2>
+            </div>
+  
+            <div class="footer__container footer__container--icons">
+              <a href="https://www.instagram.com" class="footer_link"
+                ><img
+                  class="footer__icon"
+                  src="./assets/icons/SVG/Icon-instagram.svg"
+                  alt="instagram icon"
+              /></a>
+              <a href="https://www.facebook.com" class="footer_link"
+                ><img
+                  class="footer__icon"
+                  src="./assets/icons/SVG/Icon-facebook.svg"
+                  alt="facebook icon"
+              /></a>
+              <a href="https://www.twitter.com" class="footer_link"
+                ><img
+                  class="footer__icon"
+                  src="./assets/icons/SVG/Icon-twitter.svg"
+                  alt="twitter icon"
+              /></a>
+            </div>
+  
+          <div class="footer__container footer__container--space">
+            <div class="footer_content">
+              <h3 class="footer__subtitle">The Random. Headquarters</h3>
+              <p class="footer__info">
+                404 Error Way<br />Timbuktoo, NaN 200, Madagascar
+              </p>
+              <p class="footer__info">info@therandom..com</p>
+            </div>
+  
+          <div class="footer__logo">
+            <a class="footer__brand" href="./index.html"
+              ><img src="./assets/logo/logo.svg" alt="The Random News Logo"
+            /></a>
+          </div>
+          <div class="footer__copyright">
+            <p class="footer__info">
+              Copyright The Random. © 2024 All Rights Reserved
+            </p>
+          </div>
+        </article>
+      </footer>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+@use "./partials/fonts" as *;
+@use "./partials/mixins" as *;
+@use "./partials/colors" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Playfair Display";
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.nav {
+  background-color: #02474d;
+  box-shadow: 0 0.1rem 0.15rem rgba($color: #000, $alpha: 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  min-width: 280px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    min-width: 16rem;
+    overflow: hidden;
+    gap: 1rem;
+
+    @include navbar {
+      flex-direction: row;
+    }
+
+    @include tablet {
+      padding: 1rem 1rem;
+    }
+
+    @include desktop {
+      width: 1024px;
+      margin: auto;
+    }
+  }
+
+  &__logo {
+    width: 15rem;
+  }
+  &__search {
+    display: flex;
+  }
+
+  &__input {
+    padding: 0.2rem;
+    border: none;
+    height: 100%;
+
+    &:focus-visible {
+      outline-color: #b5d6ba;
+    }
+  }
+
+  &__button {
+    border: #a5c2a9 solid 0.1rem;
+    padding: 0.2rem;
+    color: white;
+    background-color: #b5d6ba;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.news {
+  padding: 1rem;
+  background-color: #fff0da;
+  padding-bottom: 2rem;
+
+  &__header {
+    font-size: 2rem;
+    font-weight: normal;
+    color: #000;
+    margin-bottom: 2rem;
+  }
+  &__bold {
+    font-weight: bold;
+    font-size: 2.2rem;
+  }
+  &__smaller {
+    font-size: 1.5rem;
+    color: #02474d;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    @include desktop {
+      width: 1024px;
+    }
+  }
+  &__article {
+    border: #000 solid 1px;
+    padding: 1rem;
+    width: 400px;
+    display: flex;
+    background-color: white;
+    border-radius: 0.3rem;
+    border: #fff0da;
+    box-shadow: 0 0.2rem 0.2rem rgba($color: #000, $alpha: 0.3);
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @include navbar {
+      width: 50%;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    @include tablet {
+      width: 33.333%;
+    }
+  }
+
+  &__title {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  &__info {
+    overflow: hidden;
+    word-wrap: break-word;
+    color: #abacab;
+    font-size: 0.8rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+.footer {
+  background-color: #02474d;
+  color: white;
+  position: relative;
+  padding: 1rem;
+
+  &__card {
+    @include desktop {
+      width: 1024px;
+      margin: auto;
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  &__logo {
+    padding-top: 1rem;
+    width: 10rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+
+    // @include tablet {
+    //   flex-direction: row;
+    //   width: 100%;
+    //   gap: 1rem;
+    // }
+
+    &--icons {
+      flex-direction: row;
+      gap: 2rem;
+      align-items: center;
+      justify-content: flex-start;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+
+      @include tablet {
+        width: 33.333%;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-weight: bold;
+  }
+}
